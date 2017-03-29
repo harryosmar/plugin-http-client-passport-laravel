@@ -6,9 +6,9 @@
  * Time: 5:55 PM
  */
 
-namespace PluginHttpClientPassportLaravel;
+namespace PluginHttpClientPassportLaravel\Contract;
 
-interface Client
+interface HttpMethod
 {
     public function get();
 
