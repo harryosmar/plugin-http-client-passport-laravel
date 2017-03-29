@@ -1,0 +1,36 @@
+{
+    "name": "harryosmar/plugin-http-client-passport-laravel",
+    "type": "library",
+    "description": "HttpClient libraries for oauth2 server laravel/passport",
+    "keywords": ["http client", "passport", "laravel"],
+    "homepage": "https://github.com/harryosmar/plugin-http-client-passport-laravel",
+    "authors": [
+        {
+            "name": "harry osmar sitohang",
+            "email": "harryosmarsitohang@gmail.com",
+            "homepage": "https://github.com/harryosmar"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "phpcollection/phpcollection": "^0.5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "mockery/mockery": "^0.9.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "PluginHttpClientPassportLaravel\\": "src/"
+        },
+        "files": [
+            "src/Helper/functions_include.php"
+        ]
+    },
+    "autoload-dev": {
+        "files": [
+            "tests/plugin-http-client-passport-laravel/BaseTest.php"
+        ]
+    }
+}
