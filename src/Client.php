@@ -249,7 +249,7 @@ class Client implements ContractClient, HttpMethod
     {
         $this->headers['Authorization'] = sprintf(
             '%s %s',
-            'Bearer',
+            $this->token->getTokenType(),
             $accessToken
         );
 
