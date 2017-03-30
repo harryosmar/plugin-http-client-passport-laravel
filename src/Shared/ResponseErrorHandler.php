@@ -14,6 +14,11 @@ use PluginHttpClientPassportLaravel\Exception\NullResponseException;
 
 trait ResponseErrorHandler
 {
+    /**
+     * @param RequestException $exception
+     * @throws CurlErrorException
+     * @throws NullResponseException
+     */
     private function setResponseVariableWhenError(RequestException $exception)
     {
         $response = $exception->getResponse();
