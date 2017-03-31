@@ -7,15 +7,30 @@ Add this composer.json file
 
 ```json
 {
+    "require": {
+        "harryosmar/plugin-http-client-passport-laravel": "^1.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+    },
+    "extra": {
+        "incenteev-parameters": {
+            "file": "config/apiClient.yml",
+            "dist-file": "vendor/harryosmar/plugin-http-client-passport-laravel/config/apiClient.yml.dist",
+            "parameter-key": "parameters"
+        }
+    },
     "repositories": [
         {
             "type": "vcs",
             "url": "git@gitlab.com:harryosmar/plugin-http-client-passport-laravel.git"
         }
-    ],
-    "require": {
-        "harryosmar/plugin-http-client-passport-laravel": "^1.0"
-    }
+    ]
 }
 ```
 
