@@ -33,6 +33,9 @@ class ServiceContainer
         return self::$instance;
     }
 
+    /**
+     * ServiceContainer constructor.
+     */
     private function __construct()
     {
         $this->container = new ContainerBuilder();
@@ -41,6 +44,9 @@ class ServiceContainer
         $loader->load('services.yml');
     }
 
+    /**
+     * @return ContainerBuilder
+     */
     public function getContainer()
     {
         return $this->container;
