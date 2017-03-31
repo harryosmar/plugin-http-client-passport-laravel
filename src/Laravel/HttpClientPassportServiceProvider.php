@@ -40,6 +40,7 @@ class HttpClientPassportServiceProvider extends ServiceProvider
             return $httpClientPassportLaravel;
         });
     }
+
     public function provides()
     {
         return ['HttpClientPassportLaravel'];
