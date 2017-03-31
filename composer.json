@@ -16,7 +16,8 @@
         "guzzlehttp/guzzle": "^6.2",
         "phpcollection/phpcollection": "^0.5.0",
         "incenteev/composer-parameter-handler": "^2.1",
-        "symfony/dependency-injection": "^3.2"
+        "symfony/dependency-injection": "^3.2",
+        "symfony/config": "^3.2"
     },
     "require-dev": {
         "phpunit/phpunit": "*",
