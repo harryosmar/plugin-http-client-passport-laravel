@@ -39,6 +39,34 @@ Then running
 $ composer install
 ```
 
+#### Install in Laravel 5
+Add this following service provider to your `config/app.php` file.
+```php
+PluginHttpClientPassportLaravel\Laravel\HttpClientPassportServiceProvider
+```
+
+#### Using Service Container
+```php
+/** @var \PluginHttpClientPassportLaravel\Client $httpClientPassportLaravel */
+$httpClientPassportLaravel =  ServiceContainer::getInstance()
+    ->getContainer()
+    ->get('HttpClientPassportLaravel');
+
+# example for request post
+$httpClientPassportLaravel
+    ->action('oauth/token')
+    ->body([
+        'grant_type'  => 'password',
+        'client_id'  => 1,
+        'client_secret'  => 'xxxx',
+        'redirect_uri'  => 'http//localhost/auth/callback',
+        'username'  => 'username',
+        'password'  => 'secret',
+        'scope'  => 'scope1 scope2',
+    ])
+    ->post();
+```
+
 ## About
 
 
