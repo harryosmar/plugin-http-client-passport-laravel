@@ -46,7 +46,7 @@ PluginHttpClientPassportLaravel\Laravel\HttpClientPassportServiceProvider
 ```
 
 #### Using Service Container
-This approach can be used for **all framework**
+This approach can be used for **all PHP framework**
 ```php
 /** @var \PluginHttpClientPassportLaravel\Client $httpClientPassportLaravel */
 $httpClientPassportLaravel =  ServiceContainer::getInstance()
