@@ -33,7 +33,10 @@ class HttpClientPassportServiceProvider extends ServiceProvider
     {
         $this->app->singleton('HttpClientPassportLaravel', function ($app) {
             /** @var \PluginHttpClientPassportLaravel\Client $httpClientPassportLaravel */
-            $httpClientPassportLaravel =  ServiceContainer::getInstance()->getContainer()->get('HttpClientPassportLaravel');
+            $httpClientPassportLaravel =  ServiceContainer::getInstance()
+                ->getContainer()
+                ->get('HttpClientPassportLaravel');
+
             return $httpClientPassportLaravel;
         });
     }
