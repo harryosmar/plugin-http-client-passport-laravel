@@ -1,0 +1,15 @@
+imports:
+    - { resource: '../../../../config/apiClient.yml' }
+
+services:
+    GuzzleClient:
+        class: GuzzleHttp\Client
+        arguments: ['%httpclient.api_url%']
+
+    Token:
+        class: PluginHttpClientPassportLaravel\Libraries\Token
+        arguments: ['%httpclient.client_id%', '%httpclient.client_secret%', '%httpclient.allow_redirects%', '%httpclient.debug%', '%httpclient.connect_timeout%']Token:
+
+    HttpClientPassportLaravel:
+        class: PluginHttpClientPassportLaravel\Client
+        arguments: ['@GuzzleClient', '@Token', '%httpclient.allow_redirects%', '%httpclient.debug%', '%httpclient.connect_timeout%']

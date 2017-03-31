@@ -4,3 +4,4 @@ parameters:
     httpclient.allow_redirects: 0 # 1 for true, 0 for false
     httpclient.client_id: 3
     httpclient.client_secret: CvrHI3bOifYCxxanRtjj8KSaRdUDDlArpbLC2UtV
+    httpclient.api_url: http://api.survey.me
