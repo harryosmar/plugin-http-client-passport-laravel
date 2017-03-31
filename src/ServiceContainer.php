@@ -6,11 +6,11 @@
  * Time: 9:25 AM
  */
 
-namespace PluginHttpClientPassportLaravel\services;
+namespace PluginHttpClientPassportLaravel;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
-use Symfony\Component\Routing\Loader\YamlFileLoader;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 class ServiceContainer
 {
@@ -37,7 +37,7 @@ class ServiceContainer
     {
         $this->container = new ContainerBuilder();
 
-        $loader = new YamlFileLoader($this->container, new FileLocator(__DIR__));
+        $loader = new YamlFileLoader($this->container, new FileLocator(__DIR__ . '../'));
         $loader->load('services.yml');
     }
 
